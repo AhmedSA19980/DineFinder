@@ -1,13 +1,16 @@
-import { restaurants } from "@/data/restaurants";
+import { getRestaurant as getRestaurantById } from "@/service/restaurants.service";
 import Link from "next/link";
 
 
 
 
-export default async function RestaurantPage({params}:RestaurantPageProps){
+
+
+export default async function RestaurantPage({params,}:RestaurantPageProps){
     const {id} = await params ;
 
-    const restaurant = restaurants.find((restaurant)=> restaurant.id === Number(id));
+    const restaurant = await getRestaurantById(Number(id));  // implement SSR
+    //restaurants.find((restaurant)=> restaurant.id === Number(id)); * fetch data from browser
 
     if(!restaurant){
         return(
