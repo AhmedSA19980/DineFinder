@@ -1,4 +1,5 @@
 import {RestaurantCard} from "@/component/restaurantcard";
+import RestaurantSearch from "@/component/RestaurantSearch";
 import { restaurants } from "@/data/restaurants";
 
 export default function RestaurantsPage(){
@@ -10,11 +11,15 @@ export default function RestaurantsPage(){
           Find your next favorite restaurant.
         </p>
 
-        <section className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/*<section className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {restaurants.map((restaurant) => (
             <RestaurantCard key={restaurant.id} restaurant={restaurant} />
           ))}
-        </section>
+        </section>*/}
+
+        <div>
+          <RestaurantSearch />
+        </div>
       </main>
     );
 }

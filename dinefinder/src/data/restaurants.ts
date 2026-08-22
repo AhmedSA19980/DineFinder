@@ -1,5 +1,6 @@
 import { Restaurant } from "@/types/restaurantsty";
 
+
 export const restaurants: Restaurant[] = [
   {
     id: 1,
@@ -7,9 +8,8 @@ export const restaurants: Restaurant[] = [
     cuisine: "Italian",
     location: "Jeddah",
     rating: 4.7,
-    description:
-      "A cozy Italian restaurant serving traditional pasta, pizza, and fresh salads.",
-    image: "/restaurants/la-piazza.jpg",
+    description: "Traditional Italian food including pasta and pizza.",
+    image: "src.png",
   },
   {
     id: 2,
@@ -17,9 +17,8 @@ export const restaurants: Restaurant[] = [
     cuisine: "Japanese",
     location: "Jeddah",
     rating: 4.8,
-    description:
-      "A Japanese restaurant specializing in sushi, ramen, and traditional dishes.",
-    image: "/restaurants/sakura-house.jpg",
+    description: "Japanese cuisine with sushi and ramen.",
+    image: "src.png",
   },
   {
     id: 3,
@@ -27,8 +26,34 @@ export const restaurants: Restaurant[] = [
     cuisine: "Steakhouse",
     location: "Jeddah",
     rating: 4.6,
-    description:
-      "A modern steakhouse offering grilled meats, burgers, and premium sides.",
-    image: "/restaurants/the-grill.jpg",
+    description: "Premium grilled meats and steak.",
+    image: "src.png",
+  },
+  {
+    id: 4,
+    name: "Bella Roma",
+    cuisine: "Italian",
+    location: "Jeddah",
+    rating: 4.9,
+    description: "Modern Italian restaurant with fresh pasta.",
+    image: "src.png",
+  },
+  {
+    id: 5,
+    name: "Tokyo Kitchen",
+    cuisine: "Japanese",
+    location: "Jeddah",
+    rating: 4.3,
+    description: "Japanese comfort food and sushi.",
+    image: "src.png",
+  },
+  {
+    id: 6,
+    name: "Burger Factory",
+    cuisine: "American",
+    location: "Jeddah",
+    rating: 4.4,
+    description: "Burgers, fries, and American food.",
+    image: "src.png",
   },
 ];
