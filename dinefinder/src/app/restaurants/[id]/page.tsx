@@ -1,4 +1,4 @@
-import { getRestaurant as getRestaurantById } from "@/service/restaurants.service";
+import { getRestaurant as getRestaurantById } from "@/service/restaurant.service";
 import Link from "next/link";
 
 

@@ -56,4 +56,22 @@ export const restaurants: Restaurant[] = [
     description: "Burgers, fries, and American food.",
     image: "src.png",
   },
+  {
+    id: 7,
+    name: "Mediterranean Garden",
+    cuisine: "Mediterranean",
+    location: "Jeddah",
+    rating: 4.8,
+    description: "Fresh Mediterranean dishes with a modern atmosphere.",
+    image: "src2.png",
+  },
+  {
+    id: 8,
+    name: "Mediterranean Gold",
+    cuisine: "Mediterranean",
+    location: "Riydh",
+    rating: 4.7,
+    description: "Fresh Mediterranean dishes with a modern atmosphere.",
+    image: "src2.png",
+  },
 ];
