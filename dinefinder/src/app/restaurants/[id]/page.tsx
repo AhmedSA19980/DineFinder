@@ -1,8 +1,8 @@
 import { getRestaurant as getRestaurantById } from "@/service/restaurant.service";
 import Link from "next/link";
-
-
-
+import Reviews from "@/component/getReviews";
+import { Suspense } from "react";
+import ReviewsSkeleton from "@/component/ReviewsSkeleton";
 
 
 
@@ -55,6 +55,9 @@ export default async function RestaurantPage({params,}:RestaurantPageProps){
             {restaurant.description}
           </p>
         </article>
+        <Suspense fallback={<ReviewsSkeleton/>}>
+          <Reviews restaurantId={restaurant.id}/>
+        </Suspense>
       </main>
     );
 }
