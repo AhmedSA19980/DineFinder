@@ -1,0 +1,38 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "La Piazza",
+      "cuisine": "Italian",
+      "location": "Jeddah",
+      "rating": 4.7,
+      "description": "Traditional Italian food including pasta and pizza."
+    },
+    {
+      "id": 2,
+      "name": "Sakura House",
+      "cuisine": "Japanese",
+      "location": "Jeddah",
+      "rating": 4.8,
+      "description": "Japanese cuisine with sushi and ramen."
+    },
+    
+  {
+    "id": 3,
+    "name": "The Grill",
+    "cuisine": "Steakhouse",
+    "location": "Jeddah",
+    "rating": 4.6,
+    "description": "Premium grilled meats and steak.",
+    "image": "src.png"
+  },{
+    "id": 4,
+    "name": "The Grill 3",
+    "cuisine": "Steakhouse",
+    "location": "Mekkah",
+    "rating": 4.6,
+    "description": "Premium grilled meats and steak.",
+    "image": "src.png"
+  }
+  ]
+}

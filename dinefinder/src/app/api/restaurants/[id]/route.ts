@@ -1,5 +1,5 @@
 import { restaurants } from "@/data/restaurants";
-import { getRestaurant } from "@/service/restaurants.service";
+import { getRestaurant } from "@/service/restaurant.service";
 import { RouteProps } from "@/types/routeprops";
 
 

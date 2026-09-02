@@ -1,7 +1,7 @@
 import { restaurants } from "@/data/restaurants";
 import { Restaurant } from "@/types/restaurantsty";
 
-export async function getRestaurants():Promise<Restaurant[] | null>{
+export async function getRestaurant(id:number):Promise<Restaurant | null>{
   
   /*const response = await fetch(`http://localhost:3000/api/restaurants/${id}`
     ,{cache:"no-cache"}
@@ -11,6 +11,6 @@ export async function getRestaurants():Promise<Restaurant[] | null>{
     setTimeout(resolve ,500)
     );
 
-    return restaurants ;
+    return (restaurants.find((restaurant) => restaurant.id ===id) ?? null)
   
 }
