@@ -3,15 +3,16 @@ import Link from "next/link";
 import Reviews from "@/component/getReviews";
 import { Suspense } from "react";
 import ReviewsSkeleton from "@/component/ReviewsSkeleton";
-
+import { ReservationForm } from "@/component/ReservationForm";
 
 
 export default async function RestaurantPage({params,}:RestaurantPageProps){
-    const {id} = await params ;
+   
+  const {id} = await params ;
 
     const restaurant = await getRestaurantById(Number(id));  // implement SSR
     //restaurants.find((restaurant)=> restaurant.id === Number(id)); * fetch data from browser
-
+console.log("Restaurant page rendered:", restaurant?.id);
     if(!restaurant){
         return(
             <main className="mx-auto max-w-4xl px-6 py-10">
@@ -36,6 +37,9 @@ export default async function RestaurantPage({params,}:RestaurantPageProps){
           ← Back to restaurants
         </Link>
 
+        <p className="text-xs text-gray-500">
+          Current route: /restaurants/{restaurant.id}
+        </p>
         <article className="mt-8">
           <h1 className="text-4xl font-bold">{restaurant.name}</h1>
 
@@ -55,9 +59,12 @@ export default async function RestaurantPage({params,}:RestaurantPageProps){
             {restaurant.description}
           </p>
         </article>
-        <Suspense fallback={<ReviewsSkeleton/>}>
-          <Reviews restaurantId={restaurant.id}/>
+        <Suspense fallback={<ReviewsSkeleton />}>
+          <Reviews restaurantId={restaurant.id} />
         </Suspense>
+        <section>
+          <ReservationForm restaurantId={String(restaurant.id)} />
+        </section>
       </main>
     );
 }
