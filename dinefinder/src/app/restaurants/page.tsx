@@ -2,12 +2,20 @@ import {RestaurantCard} from "@/component/restaurantcard";
 import RestaurantSearch from "@/component/RestaurantSearch";
 import { getRestaurants } from "@/service/restaurants.service";
 import { Restaurant } from "@/types/restaurantsty";
+import { Metadata } from "next";
 
 
 
 export const revalidate = 10;
 
  const generatedAt = new Date().toLocaleTimeString();
+
+
+export const metadata: Metadata = {
+  title: "Restaurants",
+  description:
+    "Browse restaurants, discover new places to eat, and find your next dining experience.",
+};
 
 export default async function RestaurantsPage(){
 
